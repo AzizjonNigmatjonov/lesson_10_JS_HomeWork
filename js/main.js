@@ -25,9 +25,18 @@ buttonElement.onclick = function(event) {
         liElement.textContent = inputElement.value;
         listElement.appendChild(liElement)
         inputElement.value = '';
+
+        let delateElement = document.createElement('button');
+        delateElement.classList.add('dalete-button');
+        liElement.appendChild(delateElement);
+
+        delateElement.addEventListener('click', function(e){
+            const li = e.target.parentElement;
+            li.parentNode.removeChild(li)
+        })
+
     }
 }
-
 
 let listElement2 = document.querySelector('.telegram-list_second')
 
@@ -43,5 +52,16 @@ buttonElement2.onclick = function(event) {
         liElement2.textContent = inputElement2.value;
         listElement.appendChild(liElement2);
         inputElement2.value = '';
+
+        let delateElement = document.createElement('button');
+        delateElement.classList.add('dalete-button');
+        liElement2.appendChild(delateElement);
+
+        delateElement.addEventListener('click', function(e){
+            const li = e.target.parentElement;
+            li.parentNode.removeChild(li)
+        })
+
+        
     }
 }
