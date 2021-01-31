@@ -25,16 +25,28 @@ buttonElement.onclick = function(event) {
         liElement.textContent = inputElement.value;
         listElement.appendChild(liElement)
         inputElement.value = '';
-
+        
         let delateElement = document.createElement('button');
         delateElement.classList.add('dalete-button');
         liElement.appendChild(delateElement);
-
+        
         delateElement.addEventListener('click', function(e){
             const li = e.target.parentElement;
             li.parentNode.removeChild(li)
         })
-
+        
+        // create time 
+        let sendTime = document.createElement('time');
+        sendTime.textContent = dateNow;
+        sendTime.classList.add('send-time');
+        liElement.appendChild(sendTime);
+        
+        moment.locale('uz-latn')
+        let hozir = moment().format('LT');
+        
+        let dataNow= document.getElementsByClassName("phone-time");
+        dataNow = moment().format('h:mm dddd');
+        
     }
 }
 
@@ -52,16 +64,27 @@ buttonElement2.onclick = function(event) {
         liElement2.textContent = inputElement2.value;
         listElement.appendChild(liElement2);
         inputElement2.value = '';
-
+        
         let delateElement = document.createElement('button');
         delateElement.classList.add('dalete-button');
         liElement2.appendChild(delateElement);
-
+        
         delateElement.addEventListener('click', function(e){
             const li = e.target.parentElement;
             li.parentNode.removeChild(li)
         })
-
+        
+        // create time 
+        let sendTime = document.createElement('time');
+        sendTime.textContent = hozir;
+        sendTime.classList.add('send-time');
+        liElement2.appendChild(sendTime);
+        
+        // moment.locale('uz-latn')
+        // let hozir = moment().format('LT');
+        
+        // let dataNow= document.getElementsByClassName("phone-time");
+        // dataNow = moment().format('h:mm dddd');
         
     }
 }
