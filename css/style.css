@@ -54,7 +54,7 @@ body {
 }
 
 .phone-telegram::-webkit-scrollbar {
-	display: none;
+    display: none;
 }
 
 .phone-press {
@@ -81,7 +81,9 @@ body {
     border-radius: 50px;
     outline: none;
     border: none;
-    background-color: #ddd
+    background-color: #ddd;
+    height: 45px;
+    resize: none;
 }
 
 .form-button {
@@ -99,6 +101,13 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 20px;
+    height: 400px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.telegram-list::-webkit-scrollbar {
+    display: none;
 }
 
 .telegram-item {
@@ -187,4 +196,20 @@ body {
     height: 12px;
     border: none !important;
     outline: none !important;
+}
+
+.context-list {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px #f1f1f1;
+    position: absolute;
+    top: 20px;
+    left: 205px;
+}
+
+.context-item {
+    font-size: 14px;
+    color: red;
+    list-style: square;
 }
